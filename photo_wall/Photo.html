@@ -1,0 +1,278 @@
+<!DOCTYPE html >
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="He Shuhao (Silver He)" />
+    <title>清山涧展览厅——我的手机摄影作品展</title>
+
+    <style type="text/css">
+        /* 设置自定义标题h1边框样式，文字颜色和居中对齐，半透明 */
+        h1 {
+            border: 5px solid black;
+            color: black;
+            text-align: center;
+            opacity: 0.5;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        /* 设置图片的大小和边框样式 */
+        .container img {
+            width: 90%;
+            margin-right: 5%;
+            margin-bottom: 20px;
+            float: center;
+            padding: 5px;
+            border: solid white 5px;
+            margin: 20px;
+        }
+
+        /* 设置鼠标移动到图片上的效果，小幅度旋转，变大，同时设置阴影来体现出层级关系。与此同时适配各种浏览器。同时设置层级为更高一级。 */
+        .container img:hover {
+            box-shadow: 15px 15px 20px rgba(50, 50, 50, 0.4);
+
+            transform: rotate(6deg) scale(1.1);
+            -ms-transform: rotate(6deg) scale(1.1);
+            /* IE 9 */
+            -moz-transform: rotate(6deg) scale(1.1);
+            /* Firefox */
+            -webkit-transform: rotate(6deg) scale(1.1);
+            /* Safari 和 Chrome */
+            -o-transform: rotate(6deg) scale(1.1);
+            /* Opera */
+
+            z-index: 100;
+        }
+
+        /* 设置图片的圆角显示 */
+        img {
+            border-radius: 15px;
+        }
+
+        /* 设置点击图片放大的样式，默认为不显示，居中，位置为相对位置。 */
+        #popup {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: none;
+        }
+
+        /* 设置点击放大的背景样式，默认为半透明的黑色。 */
+        #popup .bg {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        /* @media \0screen\,
+        screen\9 {
+            #popup .bg {
+                background-color: #000000;
+                filter: Alpha(opacity=50);
+                position: static;
+            }
+
+            #popup .bg img {
+                position: relative;
+            }
+        } */
+
+        /* 将弹出放大的图片设置为全大小全屏显示 */
+        #popup img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* 设置放到图片上鼠标指针样式 */
+        a:hover {
+            text-decoration: none;
+            cursor: hand;
+        }
+
+        /* 设置文字的样式，默认不显示，居中显示，行高36px，加粗。 */
+        a span {
+            display: none;
+            cursor: hand;
+            text-align: center;
+            color: #FFFFFF;
+            line-height: 36px;
+            padding: 45px 0;
+            font-weight: bold;
+        }
+
+        /* 设置鼠标滑过的样式，默认为block显示，背景为半透明黑色，位置为相对位置 */
+        a:hover span {
+            width: 100%;
+            background: #000000;
+            display: block;
+            position: fixed;
+            bottom: 0px;
+            left: 0;
+            color: #FFFFFF;
+            filter: alpha(opacity=60);
+            -moz-opacity: 0.6;
+            opacity: 0.6;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        /* 设置隐藏部分 */
+        #hide {
+            display:none;
+            padding-bottom: 15px;
+        }
+
+        /* 设置按钮的样式 */
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+
+            position: center;
+            margin: 4px 2px;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+
+            cursor: pointer;
+
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+
+        }
+
+        /* 设置鼠标滑过按钮样式，增加按钮的阴影，显现出层次感 */
+        .button2:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* 设置按钮的位置 */
+        #btposition {
+            text-align: center;
+        }
+
+
+        /* 设置背景图，全覆盖，且不重复，位置不变。 */
+        body {
+            background-image: url(photo/Yosemite.jpg);
+            background-size: cover;
+            /* -webkit-filter: blur(1px);
+            -moz-filter: blur(1px);
+            -o-filter: blur(1px);
+            -ms-filter: blur(1px);
+            filter: blur(1px);
+            z-index: -1; */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="center border">
+            <br />
+            清山涧展览厅——我的手机摄影作品展
+            <p></p>
+        </h1>
+
+        <div id="container" class="container">
+            <a href="#"><img src="photo/1.jpg" alt="青岛·栈桥戏水" /><span>青岛·栈桥戏水</span></a>
+            <a href="#"><img src="photo/2.jpg" alt="天津天津之眼" /><span>天津·天津之眼</span></a>
+            <a href="#"><img src="photo/3.jpg" alt="西安鼓楼" /><span>西安·晨暮鼓楼</span></a>
+            <a href="#"><img src="photo/4.jpg" alt="成都IFS" /><span>成都·春熙胖达</span></a>
+            <a href="#"><img src="photo/5.jpg" alt="澳门妈阁庙" /><span>澳门·妈阁庙</span></a>
+        </div>
+        <div id="btposition">
+            </br></br>
+            <!-- <input type="button" id="show" value="点我查看更多" /> -->
+            <button class="button button2" id="bt">查看更多</button>
+            </br></br>
+        </div>
+        <div id="hide" class="container">
+
+            <a href="#"><img src="photo/6.jpg" alt="我的爱琴" /><span>南充·我的爱琴</span></a>
+            <a href="#"><img src="photo/7.jpg" alt="天津滨海机场" /><span>天津·滨海机场</span></a>
+            <a href="#"><img src="photo/8.jpg" alt="苏州拙政园" /><span>苏州·姑苏拙政</span></a>
+            <a href="#"><img src="photo/9.jpg" alt="香港中环" /><span>香港·中环路标</span></a>
+            <a href="#"><img src="photo/10.jpg" alt="杭州西湖雷峰塔" /><span>杭州·西子湖畔</span></a>
+
+        </div>
+        <div id="popup">
+            <div class="bg"><img src="" alt="" /></div>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        // flag用来描述当前是否已经隐藏或者显示图片。
+        var flag = 0;
+        // 点击按钮显示或隐藏更多图片
+        var obt = document.getElementById("bt");
+        var odiv = document.getElementById("hide");
+        obt.onclick = function () {
+
+                if(flag==0){
+                    odiv.style.display = "block";
+                    obt.innerHTML = "点我收起";
+                    flag=1;
+                }
+                else {
+                    odiv.style.display = "none";
+                    obt.innerHTML = "点我查看更多";
+                    flag=0;
+                }
+        }
+        // 点击图片全屏放大效果
+        var imgs = document.getElementById("container").getElementsByTagName("img");
+        var lens = imgs.length;
+        var popup = document.getElementById("popup");
+        for (var i = 0; i < lens; i++) {
+            imgs[i].onclick = function (event) {
+                event = event || window.event;
+                var target = document.elementFromPoint(event.clientX, event.clientY);
+                showBig(target.src);
+            }
+        }
+        popup.onclick = function () {
+            popup.style.display = "none";
+        }
+        function showBig(src) {
+            popup.getElementsByTagName("img")[0].src = src;
+            popup.style.display = "block";
+        }
+    </script>
+    <script type="text/javascript">
+        // 同理，针对隐藏部分的图片图片点击放大处理
+        var imgs = document.getElementById("hide").getElementsByTagName("img");
+        var lens = imgs.length;
+        var popup = document.getElementById("popup");
+
+        for (var i = 0; i < lens; i++) {
+            imgs[i].onclick = function (event) {
+                event = event || window.event;
+                var target = document.elementFromPoint(event.clientX, event.clientY);
+                showBig(target.src);
+            }
+        }
+        popup.onclick = function () {
+            popup.style.display = "none";
+        }
+        function showBig(src) {
+            popup.getElementsByTagName("img")[0].src = src;
+            popup.style.display = "block";
+        }
+    </script>
+</body>
+</html>

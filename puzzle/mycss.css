@@ -1,0 +1,279 @@
+*{
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#contain{
+    position:relative;
+    width:600px;
+    height:600px;
+    margin:2.5% auto;
+    border:5px solid darkorange;
+}
+
+#gamepad{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:450px;
+    height:450px;
+}
+
+#gamepad div{
+    position:absolute;
+    width:145px;
+    height:145px;
+
+    font-size: 130px;
+    text-align: center;
+    line-height: 145px;
+    display: inline-block;
+
+    cursor: pointer;
+    color: white;
+    -webkit-transition: 0.5s;
+}
+
+#last{
+    position: absolute;
+    left:300px;
+    top:300px;
+    width: 145px;
+    height:145px;
+
+    text-align: center;
+    font-size: 130px;
+    cursor: pointer;
+    background: url("myp2.jpg") no-repeat -300px -300px;
+
+}
+
+#setting{
+    position:absolute;
+    left:450px;
+    top:0px;
+
+    width:150px;
+    height:300px;
+}
+
+#usetime{
+    margin-top:8px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 134px;
+    height:125px;
+
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid orange
+}
+
+.backcolor{
+    background: orange;
+    color:white;
+}
+
+#set{
+    margin-top:20px;
+    width: 150px;
+    height:150px;
+
+    text-align: center
+}
+
+#orignal{
+    position: absolute;
+    left: 0px;
+    top: 300px;
+    margin-left: 5px;
+    margin-top: 5px;
+    width:140px;
+    height:140px;
+
+    border: white 5px;
+    text-align: center;
+    line-height: 150px;
+    background: url("myp2.jpg") no-repeat;
+    background-size: 100% 100%;
+        border-radius: 5px;
+}
+
+#info{
+    position: absolute;
+    left: 3px;
+    bottom:7px;
+    width: 288px;
+    height:136px;
+
+    border: 2px solid orange;
+}
+
+#info p{
+    margin: 8px;
+    margin-left: 20px;
+    line-height: 40px;
+}
+
+#srcweb{
+    position: absolute;
+    left: 293px;
+    bottom: 12px;
+    width:150px;
+    height:150px;
+
+    text-align: center;
+    line-height: 150px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#myweb{
+    position: absolute;
+    left: 450px;
+    bottom: 12px;
+    width:150px;
+    height:150px;
+
+    text-align: center;
+    line-height: 150px;
+}
+
+
+
+#gamepad div:hover, #last div:hover{
+    color: darkorange;
+}
+
+#d1{
+    left:0px;
+    background: url("myp2.jpg") no-repeat;
+    background-position:0px 0px;
+}
+#d1 p{
+    opacity:0.25;
+}
+
+#d2{
+    left:150px;
+    background: url("myp2.jpg") no-repeat;
+    background-position:-150px 0px;
+}
+#d2 p{
+    opacity:0.25;
+}
+
+#d3{
+    left:300px;
+    background: url("myp2.jpg") no-repeat;
+    background-position:-300px 0px;
+}
+#d3 p{
+    opacity:0.25;
+}
+
+#d4{
+    top:150px;
+    left:0px;
+    background: url("myp2.jpg") no-repeat;
+    background-position:-0px -150px;
+}
+#d4 p{
+    opacity:0.25;
+}
+
+#d5{
+    top: 150px;
+    left: 150px;
+    background: url("myp2.jpg") no-repeat;
+    background-position:-150px -150px;
+}
+#d5 p{
+    opacity:0.25;
+}
+
+#d6{
+    top: 150px;
+    left: 300px;
+    background: url("myp2.jpg") no-repeat;
+    background-position:-300px -150px;
+}
+#d6 p{
+    opacity:0.25;
+}
+
+#d7{
+    top: 300px;
+    left: 0px;
+    background: url("myp2.jpg") no-repeat;
+    background-position:-0px -300px;
+}
+#d7 p{
+    opacity:0.25;
+}
+
+#d8 {
+    left: 150px;
+    top: 300px;
+    background: url("myp2.jpg") no-repeat;
+    background-position:-150px -300px;
+}
+#d8 p{
+    opacity:0.25;
+}
+
+#last{
+    /*display: none;*/
+    opacity: 1;
+    -webkit-transition: 2s;
+    z-index: -100;
+    color:white;
+    line-height: 145px;
+}
+#d9 p{
+    opacity:0.25;
+}
+
+button {
+    margin: 1px;
+    width: 138px;
+    height:30px;
+
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    background-color: white;
+    color: black;
+    border: 2px solid orange;
+}
+
+.bigbt{
+    background-color: orange;
+    color: white;
+    width: 145px;
+    height:140px;
+}
+button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.bigbt:hover{
+    background-color: coral;
+    color: white;
+    width: 145px;
+    height:140px;
+}

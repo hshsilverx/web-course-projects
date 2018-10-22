@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="He Shuhao (Silver He)" />
+    <link rel="stylesheet" type="text/css" href="mycss.css"/>
+    <script type="text/javascript" src="myjs.js"></script>
+    <title>清山涧游乐园 - 图片化数字推盘</title>
+</head>
+<body>
+<div id="contain">
+    <div id="gamepad">
+        <div id="d1" onclick="move(1)"><p>1</p></div>
+        <div id="d2" onclick="move(2)"><p>2</p></div>
+        <div id="d3" onclick="move(3)"><p>3</p></div>
+        <div id="d4" onclick="move(4)"><p>4</p></div>
+        <div id="d5" onclick="move(5)"><p>5</p></div>
+        <div id="d6" onclick="move(6)"><p>6</p></div>
+        <div id="d7" onclick="move(7)"><p>7</p></div>
+        <div id="d8" onclick="move(8)"><p>8</p></div>
+    </div>
+
+    <div id="last">
+        <div id="d9"><p>9</p></div>
+    </div>
+
+    <div id="setting">
+        <div id="usetime">
+            <p class="backcolor">用时</p>
+            <p id="time">未开始</p>
+            <!--这里采用了一个转义字符的空格占位，防止结构变化-->
+            <p class="backcolor">步数</p>
+            <p id="step">未开始</p>
+        </div>
+        <div id="set">
+            <button id="reset" onclick="initial()">还原</button>
+            <button id="pause" onclick="pauseGame()">暂停</button>
+            <button id="start" onclick="startGame()">继续</button>
+            <button id="goldfinger" onclick="goldfinger()">金手指</button>
+        </div>
+        <div id="orignal" ></div>
+    </div>
+    <div id="info">
+        <p>说明：<br>1、打开网页2s后自动开始游戏!<br>2、打不动的时候就试试金手指吧!</p>
+    </div>
+    <div id="myweb">
+        <button class="bigbt" onclick="web2()"><p>访问我的主页</p>hshsilver.com</button>
+    </div>
+    <div id="srcweb">
+        <button class="bigbt" onclick="web1()"><p>访问素材来源</p>zelda.com</button>
+    </div>
+</div>
+
+</body>
+</html>
